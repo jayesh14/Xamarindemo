@@ -11,7 +11,7 @@
 namespace FirstApp {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\xamarin-Demo\\FirstApp\\FirstApp\\FirstApp\\DemoPageMaster.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\Projects\\xamarin-Demo\\Demo\\FirstApp\\FirstApp\\FirstApp\\DemoPageMaster.xaml")]
     public partial class DemoPageMaster : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

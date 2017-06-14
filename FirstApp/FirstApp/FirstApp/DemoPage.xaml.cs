@@ -22,15 +22,15 @@ namespace FirstApp
             // Creating our pages for menu navigation
             // Here you can define title for item, 
             // icon on the left side, and page that you want to open after selection
-            var page1 = new MasterPageItem() { Title = "Item 1", Icon = "itemIcon1.png", TargetType = typeof(MainPage) };
-            var page2 = new MasterPageItem() { Title = "Item 2", Icon = "itemIcon2.png", TargetType = typeof(MainPage) };
-            var page3 = new MasterPageItem() { Title = "Item 3", Icon = "itemIcon3.png", TargetType = typeof(MainPage) };
-            var page4 = new MasterPageItem() { Title = "Item 4", Icon = "itemIcon4.png", TargetType = typeof(MainPage) };
-            var page5 = new MasterPageItem() { Title = "Item 5", Icon = "itemIcon5.png", TargetType = typeof(MainPage) };
-            var page6 = new MasterPageItem() { Title = "Item 6", Icon = "itemIcon6.png", TargetType = typeof(MainPage) };
-            var page7 = new MasterPageItem() { Title = "Item 7", Icon = "itemIcon7.png", TargetType = typeof(MainPage) };
-            var page8 = new MasterPageItem() { Title = "Item 8", Icon = "itemIcon8.png", TargetType = typeof(MainPage) };
-            var page9 = new MasterPageItem() { Title = "Item 9", Icon = "itemIcon9.png", TargetType = typeof(MainPage) };
+            var page1 = new MasterPageItem() { Title = "Item 1", Icon = "itemIcon1.png", TargetType = typeof(Page1) };
+            var page2 = new MasterPageItem() { Title = "Item 2", Icon = "itemIcon2.png", TargetType = typeof(TabDemo) };
+            var page3 = new MasterPageItem() { Title = "Item 3", Icon = "itemIcon3.png", TargetType = typeof(Page1) };
+            var page4 = new MasterPageItem() { Title = "Item 4", Icon = "itemIcon4.png", TargetType = typeof(Page1) };
+            var page5 = new MasterPageItem() { Title = "Item 5", Icon = "itemIcon5.png", TargetType = typeof(Page1) };
+            var page6 = new MasterPageItem() { Title = "Item 6", Icon = "itemIcon6.png", TargetType = typeof(Page1) };
+            var page7 = new MasterPageItem() { Title = "Item 7", Icon = "itemIcon7.png", TargetType = typeof(Page1) };
+            var page8 = new MasterPageItem() { Title = "Item 8", Icon = "itemIcon8.png", TargetType = typeof(Page1) };
+            var page9 = new MasterPageItem() { Title = "Item 9", Icon = "itemIcon9.png", TargetType = typeof(Page1) };
 
             // Adding menu items to menuList
             menuList.Add(page1);
@@ -47,7 +47,7 @@ namespace FirstApp
             navigationDrawerList.ItemsSource = menuList;
 
             // Initial navigation, this can be used for our home page
-            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MainPage)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(Page1)));
         }
 
         private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
