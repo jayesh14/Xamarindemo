@@ -38,7 +38,7 @@ namespace FirstApp.Droid
             if (ChildCount > 0)
             {
                 GetChildAt(0).HorizontalScrollBarEnabled = false;
-                GetChildAt(0).VerticalScrollBarEnabled = false;
+                GetChildAt(0).VerticalScrollBarEnabled = true;
             }
         }
     }

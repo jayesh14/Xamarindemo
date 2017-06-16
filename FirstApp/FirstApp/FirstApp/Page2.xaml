@@ -2,78 +2,92 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FirstApp.Page2"
-             Title="Page2">
-    <ScrollView>
-        <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
-            <ScrollView Orientation="Horizontal">
-                <StackLayout Padding="10" Orientation="Horizontal" HeightRequest="100" VerticalOptions="Start" HorizontalOptions="Start">
-                    <BoxView Color="BurlyWood"  WidthRequest="75" HeightRequest="75">
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75">
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75">
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75"  HeightRequest="75" >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75" >
-                    </BoxView>
-                </StackLayout>
-            </ScrollView>
-            <StackLayout Orientation="Vertical" HeightRequest="100">
-                <BoxView Color="BurlyWood" WidthRequest="50" HeightRequest="50"  >
-                </BoxView>
-                <BoxView Color="CadetBlue" WidthRequest="50" HeightRequest="50" >
-                </BoxView>
-            </StackLayout>
+             Title="Page3">
+    <StackLayout Spacing="0" Padding="0">
+        <StackLayout VerticalOptions="Start">
+            <ScrollView>
+                <StackLayout Spacing="0" Padding="0" BackgroundColor="White">
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Padding="10" Orientation="Horizontal" HeightRequest="100" VerticalOptions="Start" HorizontalOptions="Start">
+                            <BoxView Color="BurlyWood"  WidthRequest="75" HeightRequest="75">
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75">
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75">
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75"  HeightRequest="75" >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75" >
+                            </BoxView>
+                        </StackLayout>
+                    </ScrollView>
+                    <StackLayout Orientation="Vertical" HeightRequest="100">
+                        <BoxView Color="BurlyWood" WidthRequest="50" HeightRequest="50"  >
+                        </BoxView>
+                        <BoxView Color="CadetBlue" WidthRequest="50" HeightRequest="50" >
+                        </BoxView>
+                    </StackLayout>
 
-            <StackLayout Orientation="Vertical" HeightRequest="100">
-                <BoxView Color="Cyan" WidthRequest="50" HeightRequest="50"  >
-                </BoxView>
-                <BoxView Color="MediumVioletRed" WidthRequest="50" HeightRequest="50" >
-                </BoxView>
-            </StackLayout>
-            <ScrollView Orientation="Horizontal">
-                <StackLayout Padding="10" Orientation="Horizontal"  HeightRequest="100">
-                    <BoxView Color="BurlyWood"  WidthRequest="75" HeightRequest="75">
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75">
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75">
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75"  HeightRequest="75" >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
-                    </BoxView>
-                    <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75" >
-                    </BoxView>
+                    <StackLayout Orientation="Vertical" HeightRequest="100">
+                        <BoxView Color="Cyan" WidthRequest="50" HeightRequest="50"  >
+                        </BoxView>
+                        <BoxView Color="MediumVioletRed" WidthRequest="50" HeightRequest="50" >
+                        </BoxView>
+                    </StackLayout>
+                    <ScrollView Orientation="Horizontal">
+                        <StackLayout Padding="10" Orientation="Horizontal"  HeightRequest="100">
+                            <BoxView Color="BurlyWood"  WidthRequest="75" HeightRequest="75">
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75">
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75">
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75"  HeightRequest="75" >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="BurlyWood" WidthRequest="75" HeightRequest="75"  >
+                            </BoxView>
+                            <BoxView Color="CadetBlue" WidthRequest="75" HeightRequest="75" >
+                            </BoxView>
+                        </StackLayout>
+                    </ScrollView>
                 </StackLayout>
             </ScrollView>
         </StackLayout>
-    </ScrollView>
+        <StackLayout VerticalOptions="EndAndExpand" Spacing="0" Padding="0" BackgroundColor="AliceBlue">
+            <StackLayout Orientation="Horizontal" HeightRequest="50" HorizontalOptions="FillAndExpand">
+                <BoxView Color="BurlyWood"  HeightRequest="25" HorizontalOptions="FillAndExpand">
+                </BoxView>
+                <BoxView Color="CadetBlue" HeightRequest="25" HorizontalOptions="FillAndExpand">
+                </BoxView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+   
+
 </ContentPage>
