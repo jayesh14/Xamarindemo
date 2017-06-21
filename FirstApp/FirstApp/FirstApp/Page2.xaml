@@ -82,6 +82,7 @@
         <StackLayout VerticalOptions="EndAndExpand" Spacing="0" Padding="0" BackgroundColor="AliceBlue">
             <StackLayout Orientation="Horizontal" HeightRequest="50" HorizontalOptions="FillAndExpand">
                 <BoxView Color="BurlyWood"  HeightRequest="25" HorizontalOptions="FillAndExpand">
+                    
                 </BoxView>
                 <BoxView Color="CadetBlue" HeightRequest="25" HorizontalOptions="FillAndExpand">
                 </BoxView>

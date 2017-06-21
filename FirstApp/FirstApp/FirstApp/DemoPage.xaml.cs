@@ -27,10 +27,10 @@ namespace FirstApp
             var page3 = new MasterPageItem() { Title = "Item 3", Icon = "itemIcon3.png", TargetType = typeof(Page2) };
             var page4 = new MasterPageItem() { Title = "Item 4", Icon = "itemIcon4.png", TargetType = typeof(Page3) };
             var page5 = new MasterPageItem() { Title = "Item 5", Icon = "itemIcon5.png", TargetType = typeof(Page4) };
-            var page6 = new MasterPageItem() { Title = "Item 6", Icon = "itemIcon6.png", TargetType = typeof(Page1) };
-            var page7 = new MasterPageItem() { Title = "Item 7", Icon = "itemIcon7.png", TargetType = typeof(Page1) };
-            var page8 = new MasterPageItem() { Title = "Item 8", Icon = "itemIcon8.png", TargetType = typeof(Page1) };
-            var page9 = new MasterPageItem() { Title = "Item 9", Icon = "itemIcon9.png", TargetType = typeof(Page1) };
+            var page6 = new MasterPageItem() { Title = "List View", Icon = "itemIcon6.png", TargetType = typeof(BasicListView) };
+            var page7 = new MasterPageItem() { Title = "Mvvm", Icon = "itemIcon7.png", TargetType = typeof(MvvmClockPage) };
+            var page8 = new MasterPageItem() { Title = "MvvMCommand", Icon = "itemIcon8.png", TargetType = typeof(PowerOfThreePage) };
+            var page9 = new MasterPageItem() { Title = "Item 9", Icon = "itemIcon9.png", TargetType = typeof(BasicListView) };
 
             // Adding menu items to menuList
             menuList.Add(page1);

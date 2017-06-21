@@ -9,12 +9,27 @@ namespace FirstApp
 {
     public partial class App : Application
     {
+
+        static DataAccess dbUtils;
+
         public App()
         {
             InitializeComponent();
             //MainPage = new FirstApp.EntryPage();
             //MainPage = new NavigationPage(new FirstApp.EntryPage());
             MainPage = new FirstApp.DemoPage();
+        }
+
+        public static DataAccess DAUtil
+        {
+            get
+            {
+                if (dbUtils == null)
+                {
+                    dbUtils = new DataAccess();
+                }
+                return dbUtils;
+            }
         }
 
         protected override void OnStart()
