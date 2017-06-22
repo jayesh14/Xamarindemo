@@ -50,12 +50,16 @@
       <DependentUpon>DemoPageMaster.xaml</DependentUpon>
     </Compile>
     <Compile Include="DemoPageMenuItem.cs" />
+    <Compile Include="DynamicPage.xaml.cs">
+      <DependentUpon>DynamicPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EntryPage.xaml.cs">
       <DependentUpon>EntryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IFileHelper.cs" />
     <Compile Include="Interfaces\ISQLite.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Question.cs" />
     <Compile Include="MvvmClockPage.xaml.cs">
       <DependentUpon>MvvmClockPage.xaml</DependentUpon>
     </Compile>
@@ -88,6 +92,7 @@
       <DependentUpon>TabDemoTab1.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\PowersViewModel.cs" />
+    <Compile Include="ViewModel\QuestionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -199,6 +204,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PowerOfThreePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DynamicPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

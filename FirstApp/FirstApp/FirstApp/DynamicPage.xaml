@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstApp.DynamicPage"
+             xmlns:local="clr-namespace:FirstApp"
+             Title="DynamicPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:QuestionViewModel x:Key="viewModel">
+            </local:QuestionViewModel>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout BindingContext="{StaticResource viewModel}">
+        <StackLayout Orientation="Horizontal"
+                     Spacing="0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand">
+            <Label FontSize="Large" Text="{Binding Path=Question.Question, StringFormat='{0}'}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Spacing="0"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand">
+            <ListView ItemsSource="{Binding LstSubQuestion}" BackgroundColor="White" SeparatorColor="Blue">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextCell Text="{Binding SubQuestion}"/>-->
+                        <ViewCell>
+                            <Grid>
+                                <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Chocolate">
+                                    <Label Text="{Binding SubQuestion}"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="CenterAndExpand">
+            <Frame OutlineColor="AliceBlue" BackgroundColor="Transparent" Padding="20,40" HorizontalOptions="CenterAndExpand">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NextCommand}"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <Label Text="Next" FontSize="Large"></Label>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

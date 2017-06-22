@@ -1,0 +1,13 @@
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\FormsBook.Toolkit.dll
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\FormsBook.Toolkit.pdb
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Core.dll
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Platform.dll
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Core.pdb
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Core.xml
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\obj\Debug\FormsBook.Toolkit.csprojResolveAssemblyReference.cache
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\obj\Debug\FormsBook.Toolkit.dll
+D:\Projects\xamarin-Demo\Demo\FirstApp\FormsBook.Toolkit\obj\Debug\FormsBook.Toolkit.pdb
