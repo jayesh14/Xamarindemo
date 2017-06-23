@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace FirstApp
 {
@@ -20,6 +21,8 @@ namespace FirstApp
         public string SubQuestion { get; set; }
 
         public int QuestionID { get; set; }
+
+        public Color CellColor { get; set; }
 
     }
 }

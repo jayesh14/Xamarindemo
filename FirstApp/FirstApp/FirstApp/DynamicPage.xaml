@@ -8,29 +8,33 @@
         <ResourceDictionary>
             <local:QuestionViewModel x:Key="viewModel">
             </local:QuestionViewModel>
+            <local:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout BindingContext="{StaticResource viewModel}">
         <StackLayout Orientation="Horizontal"
-                     Spacing="0"
-                     HorizontalOptions="Center"
+                     HorizontalOptions="EndAndExpand"
                      VerticalOptions="CenterAndExpand">
-            <Label FontSize="Large" Text="{Binding Path=Question.Question, StringFormat='{0}'}" />
+            <Label FontSize="Large" Text="{Binding Total}" HorizontalOptions="EndAndExpand" VerticalOptions="Center"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+            <Label FontSize="Large" Text="{Binding Path=Question.Question, StringFormat='{0}'}" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
         </StackLayout>
         <StackLayout Orientation="Horizontal"
-                     Spacing="0"
                      HorizontalOptions="Center"
                      VerticalOptions="CenterAndExpand">
-            <ListView ItemsSource="{Binding LstSubQuestion}" BackgroundColor="White" SeparatorColor="Blue">
+            <ListView ItemsSource="{Binding LstSubQuestion}" BackgroundColor="White" SeparatorColor="Blue" >
+                <ListView.Behaviors>
+                    <local:EventToCommandBehavior EventName="ItemSelected" Command="{Binding OutputAgeCommand}" Converter="{StaticResource SelectedItemConverter}" />
+                </ListView.Behaviors>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <!--<TextCell Text="{Binding SubQuestion}"/>-->
                         <ViewCell>
-                            <Grid>
-                                <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Chocolate">
-                                    <Label Text="{Binding SubQuestion}"></Label>
+                            <StackLayout HorizontalOptions="FillAndExpand" Spacing="0" Padding="0" VerticalOptions="FillAndExpand" BackgroundColor="{Binding CellColor}">
+                                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding SubQuestion}" VerticalOptions="Center" HorizontalOptions="Start"></Label>
                                 </StackLayout>
-                            </Grid>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -43,6 +47,8 @@
                     <TapGestureRecognizer Command="{Binding NextCommand}"></TapGestureRecognizer>
                 </Frame.GestureRecognizers>
                 <Label Text="Next" FontSize="Large"></Label>
+
+               
             </Frame>
         </StackLayout>
     </StackLayout>
