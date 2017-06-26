@@ -19,22 +19,28 @@ namespace FirstApp
         public LoginPage()
         {
             InitializeComponent();
-            
-           // BindingContext = new LoginPageViewModel();
+
+            // BindingContext = new LoginPageViewModel();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             try
             {
-
+                Person p = new Person();
+                p.UserName = UserName.Text;
+                p.Password = Password.Text;
+                p = App.DAUtil.SelectEmployee(p);
                 //Navigation.PopModalAsync();
-                Navigation.PushModalAsync(new DemoPage());
+                if (p != null && p.ID > 0)
+                    Navigation.PushModalAsync(new DemoPage());
+                else
+                    DisplayAlert("Alert", "UserName and Password inValid", "OK");
                 //LoginPage = new NavigationPage(new MainPage());
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.InnerException.ToString(),"OK");
+                DisplayAlert("Error", ex.InnerException.ToString(), "OK");
             }
         }
     }

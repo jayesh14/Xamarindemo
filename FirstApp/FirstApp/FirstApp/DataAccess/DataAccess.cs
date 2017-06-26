@@ -34,5 +34,10 @@ namespace FirstApp
         {
             return dbConn.Update(aEmployee);
         }
+
+        public Person SelectEmployee(Person aEmployee)
+        {
+            return dbConn.Find<Person>(a => a.UserName == aEmployee.UserName & a.Password==a.Password);
+        }
     }
 }

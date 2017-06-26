@@ -24,9 +24,11 @@ namespace FirstApp.Droid
         {
             var sqliteFilename = "SQLiteEx.db3";
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder
+            //var path = Path.Combine(ApplicationData.Current.LocalFolder.Path, sqliteFilename);
             var path = Path.Combine(documentsPath, sqliteFilename);
-            Console.WriteLine(path);
-            if (!File.Exists(path)) File.Create(path);
+            //Console.WriteLine(path);
+            if (!File.Exists(path))
+                File.Create(path);
             var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
             var conn = new SQLite.Net.SQLiteConnection(plat, path);
             // Return the database connection 

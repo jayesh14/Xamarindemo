@@ -16,5 +16,18 @@ namespace FirstApp
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Person p = new Person();
+            p.UserName = UserName.Text.Trim();
+            p.Password = Password.Text.Trim();
+           int id= App.DAUtil.SaveEmployee(p);
+            if(id>0)
+                DisplayAlert("Added", "Registered", "OK");
+            
+            var masterPage = this.Parent as TabbedPage;
+            masterPage.CurrentPage = masterPage.Children[0];
+        }
     }
 }

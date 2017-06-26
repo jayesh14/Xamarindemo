@@ -5,9 +5,10 @@
              xmlns:pages="clr-namespace:FirstApp;assembly=FirstApp">
     <MasterDetailPage.Master>
         <!--<pages:DemoPageMaster x:Name="MasterPage" />-->
+        
         <ContentPage Title="Menu"
                  BackgroundColor="#e8e8e8">
-
+           
             <StackLayout Orientation="Vertical">
                 <StackLayout BackgroundColor="#e74c3c"
                      HeightRequest="50" >

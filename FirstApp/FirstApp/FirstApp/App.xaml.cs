@@ -15,9 +15,19 @@ namespace FirstApp
         public App()
         {
             InitializeComponent();
-            //MainPage = new FirstApp.EntryPage();
+            
             //MainPage = new NavigationPage(new FirstApp.EntryPage());
-            MainPage = new FirstApp.DemoPage();
+            dbUtils = new DataAccess();
+            Person p = new Person();
+            p.FirstName = "Admin";
+            p.LastName = "Admin";
+            p.UserName = "Admin";
+            p.Password = "Admin";
+            p.ID = 1;
+            dbUtils.SaveEmployee(p);
+            List<Person> lst = dbUtils.GetAllEmployees();
+            //MainPage = new FirstApp.DemoPage();
+            MainPage = new FirstApp.EntryPage();
         }
 
         public static DataAccess DAUtil

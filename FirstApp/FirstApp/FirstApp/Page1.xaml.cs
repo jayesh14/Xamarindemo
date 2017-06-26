@@ -21,6 +21,11 @@ namespace FirstApp
             InitializeComponent();
             //BindingContext = new Page1ViewModel();
         }
+
+        private void MenuItem1_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new EntryPage());
+        }
     }
 
     class Page1ViewModel : INotifyPropertyChanged

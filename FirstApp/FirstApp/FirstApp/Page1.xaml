@@ -2,7 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FirstApp.Page1"
-             Title="Page1">
+             Title="Page1" Opacity="0.5" >
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Name="MenuItem1" Order="Secondary"  Clicked="MenuItem1_Clicked" Text="Logout" Priority="0" />
+        <ToolbarItem Name="MenuItem2" Order="Secondary"  Text="Item 2" Priority="1" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <ResourceDictionary>
            

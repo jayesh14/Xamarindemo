@@ -15,6 +15,7 @@ namespace FirstApp
         public ICommand PreCommand { private set; get; }
         int index = 0;
         int total = 0;
+        private bool isLoading;
         public ICommand OutputAgeCommand { get; private set; }
         public string SelectedItemText { get; private set; }
       
@@ -27,12 +28,14 @@ namespace FirstApp
 
         public QuestionViewModel()
         {
+            IsLoading = true;
             BindList();
             Question = lstQuestion[0];
             Total = 0;
             LstSubQuestion = lstSubQuestionStore.Where(a => a.QuestionID == 0).ToList();
             NextCommand = new Command(ExecuteNext);
             OutputAgeCommand = new Command<SubQuestions>(OutputAge);
+            IsLoading = false;
         }
 
         void OutputAge(SubQuestions subQuestion)
@@ -62,12 +65,17 @@ namespace FirstApp
 
         void ExecuteNext()
         {
+            if (IsLoading) return;
+            IsLoading = true;
+            
             Index += 1;
             if (Index < 20)
             {
                 Question = lstQuestion[index];
                 LstSubQuestion = lstSubQuestionStore.Where(a => a.QuestionID == index).ToList();
             }
+
+            IsLoading = false;
 
         }
 
@@ -114,6 +122,14 @@ namespace FirstApp
             get
             {
                 return total;
+            }
+        }
+        public bool IsLoading
+        {
+            get { return isLoading; }
+            set
+            {
+                SetProperty(ref isLoading, value);
             }
         }
 
