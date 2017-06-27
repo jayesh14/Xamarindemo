@@ -9,11 +9,11 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <ResourceDictionary>
-           
+
         </ResourceDictionary>
     </ContentPage.Resources>
-  <ScrollView>
-    <StackLayout Padding="10">
+    <ScrollView>
+        <StackLayout Padding="10">
             <Grid VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
@@ -24,7 +24,7 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="5"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <BoxView Color="AliceBlue" Grid.Row="0" Grid.Column="0" >
@@ -48,12 +48,24 @@
                 </BoxView>
                 <BoxView Color="CadetBlue" Grid.Row="3" Grid.Column="2" >
                 </BoxView>
-                <BoxView Color="AliceBlue" Grid.Row="4" Grid.Column="0" >
-                </BoxView>
-                <BoxView Color="Bisque" Grid.Row="4" Grid.Column="2" >
-                </BoxView>
-
+                <Frame OutlineColor="AliceBlue" BackgroundColor="Blue" Grid.Row="4" Grid.Column="0">
+                    <Frame.Content>
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label FontSize="Large" Text="Type" TextColor="White"/>
+                        </StackLayout>
+                    </Frame.Content>
+                </Frame>
+                <Frame OutlineColor="#ed004a" Grid.Row="4" Grid.Column="2">
+                    <Frame.Content>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Type"/>
+                        </Grid>
+                    </Frame.Content>
+                </Frame>
             </Grid>
-    </StackLayout>
-  </ScrollView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

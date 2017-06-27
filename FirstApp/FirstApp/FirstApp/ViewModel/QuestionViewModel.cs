@@ -16,6 +16,7 @@ namespace FirstApp
         int index = 0;
         int total = 0;
         private bool isLoading;
+        bool isEnable = true;
         public ICommand OutputAgeCommand { get; private set; }
         public string SelectedItemText { get; private set; }
       
@@ -30,6 +31,7 @@ namespace FirstApp
         {
             IsLoading = true;
             BindList();
+            isEnable = true;
             Question = lstQuestion[0];
             Total = 0;
             LstSubQuestion = lstSubQuestionStore.Where(a => a.QuestionID == 0).ToList();
@@ -61,10 +63,13 @@ namespace FirstApp
                     item.CellColor = Color.Red;
                 }
             }
+
+            IsEnable = false;
         }
 
         void ExecuteNext()
         {
+            IsEnable = true;
             if (IsLoading) return;
             IsLoading = true;
             
@@ -130,6 +135,18 @@ namespace FirstApp
             set
             {
                 SetProperty(ref isLoading, value);
+            }
+        }
+
+        public bool IsEnable
+        {
+            private set
+            {
+                SetProperty(ref isEnable, value);
+            }
+            get
+            {
+                return isEnable;
             }
         }
 

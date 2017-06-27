@@ -16,16 +16,16 @@ namespace FirstApp
         {
             InitializeComponent();
             
-            //MainPage = new NavigationPage(new FirstApp.EntryPage());
-            dbUtils = new DataAccess();
-            Person p = new Person();
-            p.FirstName = "Admin";
-            p.LastName = "Admin";
-            p.UserName = "Admin";
-            p.Password = "Admin";
-            p.ID = 1;
-            dbUtils.SaveEmployee(p);
-            List<Person> lst = dbUtils.GetAllEmployees();
+           
+            //dbUtils = new DataAccess();
+            //Person p = new Person();
+            //p.FirstName = "Admin";
+            //p.LastName = "Admin";
+            //p.UserName = "Admin";
+            //p.Password = "Admin";
+            //p.ID = 1;
+            //dbUtils.SaveEmployee(p);
+            //List<Person> lst = dbUtils.GetAllEmployees();
             //MainPage = new FirstApp.DemoPage();
             MainPage = new FirstApp.EntryPage();
         }
