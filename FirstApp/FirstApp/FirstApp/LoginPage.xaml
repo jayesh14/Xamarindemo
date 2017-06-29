@@ -37,7 +37,6 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Text="Forgot Password" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
-                        
                     </Label>
                     <Label Text="New SignIn"  Grid.Row="0" Grid.Column="1"  HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"></Label>
                 </Grid>

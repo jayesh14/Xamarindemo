@@ -20,7 +20,7 @@
         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="5" >
             <Label FontSize="Large" Text="{Binding Path=Question.Question, StringFormat='{0}'}" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
         </StackLayout>
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             <ListView ItemsSource="{Binding LstSubQuestion}" BackgroundColor="White" IsEnabled="{Binding IsEnable}" SeparatorVisibility="None">
                 <ListView.Behaviors>
                     <local:EventToCommandBehavior EventName="ItemSelected" Command="{Binding OutputAgeCommand}" Converter="{StaticResource SelectedItemConverter}" />

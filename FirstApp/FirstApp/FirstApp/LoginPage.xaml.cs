@@ -16,8 +16,10 @@ namespace FirstApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        ICredentialsService storeService;
         public LoginPage()
         {
+            storeService = DependencyService.Get<ICredentialsService>();
             InitializeComponent();
 
             // BindingContext = new LoginPageViewModel();
@@ -33,7 +35,18 @@ namespace FirstApp
                 p = App.DAUtil.SelectEmployee(p);
                 //Navigation.PopModalAsync();
                 if (p != null && p.ID > 0)
-                    Navigation.PushModalAsync(new DemoPage());
+                {
+                    DependencyService.Get<ICredentialsService>().DeleteCredentials();
+                    bool doCredentialsExist = storeService.DoCredentialsExist();
+                    if (!doCredentialsExist)
+                    {
+                        storeService.SaveCredentials(p.UserName, p.Password);
+                    }
+                    //Navigation.PushModalAsync(new DemoPage());
+
+                    Navigation.InsertPageBefore(new DemoPage(), this);
+                    Navigation.PopAsync();
+                }
                 else
                     DisplayAlert("Alert", "UserName and Password inValid", "OK");
                 //LoginPage = new NavigationPage(new MainPage());

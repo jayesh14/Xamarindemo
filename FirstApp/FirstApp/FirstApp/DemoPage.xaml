@@ -6,13 +6,11 @@
     <MasterDetailPage.Master>
         <!--<pages:DemoPageMaster x:Name="MasterPage" />-->
         
-        <ContentPage Title="Menu"
-                 BackgroundColor="#e8e8e8">
+        <ContentPage Title="Menu" BackgroundColor="#e8e8e8">
            
             <StackLayout Orientation="Vertical">
-                <StackLayout BackgroundColor="#e74c3c"
+                <StackLayout BackgroundColor="BlueViolet"
                      HeightRequest="50" >
-
                     <Label Text="Some Text title"
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
@@ -25,7 +23,6 @@
                   SeparatorVisibility="None"
                   BackgroundColor="#e8e8e8"
                   ItemSelected="OnMenuItemSelected">
-
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -43,10 +40,11 @@
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <NavigationPage>
+        <pages:DemoPageDetail></pages:DemoPageDetail>
+        <!--<NavigationPage>
             <x:Arguments>
                 <pages:DemoPageDetail />
             </x:Arguments>
-        </NavigationPage>
+        </NavigationPage>-->
     </MasterDetailPage.Detail>
 </MasterDetailPage>

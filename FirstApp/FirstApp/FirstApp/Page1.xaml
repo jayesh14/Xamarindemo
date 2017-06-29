@@ -7,11 +7,7 @@
         <ToolbarItem Name="MenuItem1" Order="Secondary"  Clicked="MenuItem1_Clicked" Text="Logout" Priority="0" />
         <ToolbarItem Name="MenuItem2" Order="Secondary"  Text="Item 2" Priority="1" />
     </ContentPage.ToolbarItems>
-    <ContentPage.Resources>
-        <ResourceDictionary>
-
-        </ResourceDictionary>
-    </ContentPage.Resources>
+    
     <ScrollView>
         <StackLayout Padding="10">
             <Grid VerticalOptions="FillAndExpand">

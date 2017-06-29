@@ -9,25 +9,32 @@ namespace FirstApp
 {
     public partial class App : Application
     {
-
+        public static string AppName { get { return "StoreAccountInfoApp"; } }
         static DataAccess dbUtils;
 
         public App()
         {
             InitializeComponent();
-            
-           
-            //dbUtils = new DataAccess();
-            //Person p = new Person();
-            //p.FirstName = "Admin";
-            //p.LastName = "Admin";
-            //p.UserName = "Admin";
-            //p.Password = "Admin";
-            //p.ID = 1;
-            //dbUtils.SaveEmployee(p);
-            //List<Person> lst = dbUtils.GetAllEmployees();
-            //MainPage = new FirstApp.DemoPage();
-            MainPage = new FirstApp.EntryPage();
+            if (DependencyService.Get<ICredentialsService>().DoCredentialsExist())
+            {
+                MainPage =  new FirstApp.DemoPage();
+            }
+            else
+            {
+                MainPage = new FirstApp.EntryPage();
+            }
+
+                //dbUtils = new DataAccess();
+                //Person p = new Person();
+                //p.FirstName = "Admin";
+                //p.LastName = "Admin";
+                //p.UserName = "Admin";
+                //p.Password = "Admin";
+                //p.ID = 1;
+                //dbUtils.SaveEmployee(p);
+                //List<Person> lst = dbUtils.GetAllEmployees();
+                //MainPage = new FirstApp.DemoPage();
+                //MainPage = new FirstApp.EntryPage();
         }
 
         public static DataAccess DAUtil
